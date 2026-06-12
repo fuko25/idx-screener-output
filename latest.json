@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-11",
+  "source": "idx-bandarmologi screener (Remora framework)",
+  "generated_at": "2026-06-12T10:48:37.205474",
+  "signal_count": 2,
+  "signals": {
+    "JTPE": {
+      "reason": "Distribusi terselubung terdeteksi kuat: broker tier-1 asing (AK/UBS, BQ/Korea Investment, AG/Kiwoom, ZP/Maybank) semua net sell 1d dengan total distribusi >Rp 850M, sementara top buyer 1d didominasi broker-broker obscure lokal (XA/NH Korindo, IN/Investindo Nusantara, SA/Elit Sukses, DU/KAF Sekuritas) yang kemungkinan besar proxy akumulasi teknikal atau retail FOMO — bukan smart money sejati. Pola ini klasik distribusi bandar via retail crowd.",
+      "confidence": 78,
+      "timestamp": "2026-06-11T18:05:38.903078",
+      "ticker": "JTPE",
+      "verdict": "REJECT",
+      "key_strength": "Absorpsi flagged true dan vol_ratio 112.8% di atas average, serta ada beberapa broker 7d yang beli konsisten (CP/KB Valbury net +1.17B) — namun belum cukup mengimbangi distribusi masif broker asing tier-1 di 1d",
+      "risk_flags": [
+        "AK (UBS Sekuritas) net sell -Rp 201.9M/1d — broker asing tier-1 distribusi besar, sinyal exit institusi asing",
+        "ZP (Maybank) net sell -Rp 206.3M/1d — broker asing tier-1 lain ikut distribusi, konfirmasi double exit foreign",
+        "BQ (Korea Investment) net sell -Rp 163.1M/1d dengan sell_avg 597 > buy_avg 585 — jual di atas beli, pola distribusi terstruktur",
+        "AG (Kiwoom) net sell -Rp 120.25M/1d dengan sell_avg 599 jauh di atas buy_avg 585 — markup lalu distribusi",
+        "Top buyer 1d semua broker obscure lokal (XA, IN, SA, DU) dengan buy_avg 593-596 > close 585 — mereka beli mahal, sekarang floating loss",
+        "CP (KB Valbury) 7d net buy +Rp 1.17B dengan freq hanya 25 — low freq high value, perlu konfirmasi bukan proxy distribusi terselubung",
+        "AR 7d net buy +Rp 585M dengan freq hanya 10 transaksi — sangat suspicious, kemungkinan crossing/block deal tersembunyi",
+        "Harga close 585 turun dari prev 590 (-0.85%) meski absorpsi=true dan vol_ratio 112.8% — volume naik tapi harga turun, bearish divergence",
+        "Bid/offer ratio 0.96 dan total_offer 1954 > total_bid 1876 — tekanan jual lebih besar di queue",
+        "Top buyer 1d rata-rata beli di 593-596 sementara close 585 — semua top buyer 1d sudah underwater hari ini"
+      ]
+    },
+    "TSPC": {
+      "reason": "Volume hari ini hanya 53% dari rata-rata 20d (534K vs 1M) dengan bid/offer ratio lemah 0.40 mengindikasikan kurangnya conviction beli; sinyal bandarmologi mixed — TP (OCBC) akumulasi konsisten 7d tapi diimbangi distribusi obscure broker QA (Tuntun Sekuritas, 1 transaksi -122M net) dan AK (UBS) net_freq negatif meski net_value positif yang mengindikasikan crossing tersembunyi.",
+      "confidence": 68,
+      "timestamp": "2026-06-11T18:06:28.512491",
+      "ticker": "TSPC",
+      "verdict": "NEUTRAL",
+      "key_strength": "TP (OCBC Sekuritas) akumulasi persistent dan dominan: net +16B/7d dengan 446 net_freq positif — konsistensi ini menunjukkan institutional accumulation sabar yang genuine, bukan one-off. Jika TP terus konsisten di 30d data, ini adalah sinyal smart money yang layak di-follow ketika konfirmasi volume muncul.",
+      "risk_flags": [
+        "QA (Tuntun Sekuritas) net sell -122M dalam 1 frekuensi transaksi (50.400 lot) — pola low-freq high-value distribusi via broker obscure, kemungkinan proxy bandar distribusi",
+        "AK (UBS) net_value +117M tapi net_freq -3 di 1d — indikasi crossing tersembunyi, lebih banyak count jual vs beli, markup/distribusi terselubung",
+        "Bid/offer ratio 0.397 — supply jauh dominasi demand (offer 2935 vs bid 1165), tekanan jual belum terabsorpsi",
+        "Volume 534K hanya 53% avg 20d (1,001K) — no volume confirmation untuk breakout/entry",
+        "YP (retail Mirae) di top seller 1d — retail sudah distribusi, potensi harga berat di atas"
+      ]
+    }
+  }
+}
