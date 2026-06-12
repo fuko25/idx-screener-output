@@ -1,16 +1,16 @@
 {
   "date": "2026-06-11",
   "source": "idx-bandarmologi screener (Remora framework)",
-  "generated_at": "2026-06-12T10:48:37.205474",
+  "generated_at": "2026-06-12T11:16:55.924771",
   "signal_count": 2,
   "signals": {
     "JTPE": {
-      "reason": "Distribusi terselubung terdeteksi kuat: broker tier-1 asing (AK/UBS, BQ/Korea Investment, AG/Kiwoom, ZP/Maybank) semua net sell 1d dengan total distribusi >Rp 850M, sementara top buyer 1d didominasi broker-broker obscure lokal (XA/NH Korindo, IN/Investindo Nusantara, SA/Elit Sukses, DU/KAF Sekuritas) yang kemungkinan besar proxy akumulasi teknikal atau retail FOMO — bukan smart money sejati. Pola ini klasik distribusi bandar via retail crowd.",
-      "confidence": 78,
+      "key_strength": "Absorpsi flagged true dan vol_ratio 112.8% di atas average, serta ada beberapa broker 7d yang beli konsisten (CP/KB Valbury net +1.17B) — namun belum cukup mengimbangi distribusi masif broker asing tier-1 di 1d",
       "timestamp": "2026-06-11T18:05:38.903078",
+      "confidence": 78,
+      "reason": "Distribusi terselubung terdeteksi kuat: broker tier-1 asing (AK/UBS, BQ/Korea Investment, AG/Kiwoom, ZP/Maybank) semua net sell 1d dengan total distribusi >Rp 850M, sementara top buyer 1d didominasi broker-broker obscure lokal (XA/NH Korindo, IN/Investindo Nusantara, SA/Elit Sukses, DU/KAF Sekuritas) yang kemungkinan besar proxy akumulasi teknikal atau retail FOMO — bukan smart money sejati. Pola ini klasik distribusi bandar via retail crowd.",
       "ticker": "JTPE",
       "verdict": "REJECT",
-      "key_strength": "Absorpsi flagged true dan vol_ratio 112.8% di atas average, serta ada beberapa broker 7d yang beli konsisten (CP/KB Valbury net +1.17B) — namun belum cukup mengimbangi distribusi masif broker asing tier-1 di 1d",
       "risk_flags": [
         "AK (UBS Sekuritas) net sell -Rp 201.9M/1d — broker asing tier-1 distribusi besar, sinyal exit institusi asing",
         "ZP (Maybank) net sell -Rp 206.3M/1d — broker asing tier-1 lain ikut distribusi, konfirmasi double exit foreign",
@@ -25,12 +25,12 @@
       ]
     },
     "TSPC": {
-      "reason": "Volume hari ini hanya 53% dari rata-rata 20d (534K vs 1M) dengan bid/offer ratio lemah 0.40 mengindikasikan kurangnya conviction beli; sinyal bandarmologi mixed — TP (OCBC) akumulasi konsisten 7d tapi diimbangi distribusi obscure broker QA (Tuntun Sekuritas, 1 transaksi -122M net) dan AK (UBS) net_freq negatif meski net_value positif yang mengindikasikan crossing tersembunyi.",
-      "confidence": 68,
+      "key_strength": "TP (OCBC Sekuritas) akumulasi persistent dan dominan: net +16B/7d dengan 446 net_freq positif — konsistensi ini menunjukkan institutional accumulation sabar yang genuine, bukan one-off. Jika TP terus konsisten di 30d data, ini adalah sinyal smart money yang layak di-follow ketika konfirmasi volume muncul.",
       "timestamp": "2026-06-11T18:06:28.512491",
+      "confidence": 68,
+      "reason": "Volume hari ini hanya 53% dari rata-rata 20d (534K vs 1M) dengan bid/offer ratio lemah 0.40 mengindikasikan kurangnya conviction beli; sinyal bandarmologi mixed — TP (OCBC) akumulasi konsisten 7d tapi diimbangi distribusi obscure broker QA (Tuntun Sekuritas, 1 transaksi -122M net) dan AK (UBS) net_freq negatif meski net_value positif yang mengindikasikan crossing tersembunyi.",
       "ticker": "TSPC",
       "verdict": "NEUTRAL",
-      "key_strength": "TP (OCBC Sekuritas) akumulasi persistent dan dominan: net +16B/7d dengan 446 net_freq positif — konsistensi ini menunjukkan institutional accumulation sabar yang genuine, bukan one-off. Jika TP terus konsisten di 30d data, ini adalah sinyal smart money yang layak di-follow ketika konfirmasi volume muncul.",
       "risk_flags": [
         "QA (Tuntun Sekuritas) net sell -122M dalam 1 frekuensi transaksi (50.400 lot) — pola low-freq high-value distribusi via broker obscure, kemungkinan proxy bandar distribusi",
         "AK (UBS) net_value +117M tapi net_freq -3 di 1d — indikasi crossing tersembunyi, lebih banyak count jual vs beli, markup/distribusi terselubung",
