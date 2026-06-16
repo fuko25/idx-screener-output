@@ -1,13 +1,15 @@
 {
   "date": "2026-06-15",
   "source": "idx-bandarmologi screener (Remora framework)",
-  "generated_at": "2026-06-15T18:12:01.507820",
+  "generated_at": "2026-06-16T18:12:01.509880",
   "signal_count": 3,
   "signals": {
     "UDNG": {
-      "key_strength": "BQ (Korea Investment & Sekuritas) di top buyer 7d dengan net +952.5M/7d dan buy avg ~1154 — kemungkinan smart money Korea yang sudah akumulasi di harga lebih rendah, namun ini justru mengkonfirmasi mereka sudah profit dan distribusi hari ini via broker tier-1 lain adalah exit strategy",
       "reason": "Tier-1 institusi (AK/UBS, CC/Mandiri) net sell dominan di 1d dengan volume signifikan, sementara top buyer 1d didominasi broker obscure (MG/Semesta, FZ/Waterfront) dengan freq rendah-medium — pola distribusi terselubung via proxy sangat jelas. Bid/offer ratio lemah (0.52) dan vol_ratio hanya 64.7% dari avg20 menunjukkan momentum tidak mendukung entry.",
       "confidence": 78,
+      "key_strength": "BQ (Korea Investment & Sekuritas) di top buyer 7d dengan net +952.5M/7d dan buy avg ~1154 — kemungkinan smart money Korea yang sudah akumulasi di harga lebih rendah, namun ini justru mengkonfirmasi mereka sudah profit dan distribusi hari ini via broker tier-1 lain adalah exit strategy",
+      "ticker": "UDNG",
+      "verdict": "REJECT",
       "risk_flags": [
         "AK (UBS Sekuritas) net sell -108.7M dalam 1d — broker tier-1 asing distribusi, sinyal bearish kuat",
         "CC (Mandiri Sekuritas) net sell -100.9M dalam 1d — institusi tier-1 lokal ikut distribusi",
@@ -18,14 +20,14 @@
         "Bid/offer ratio 0.52 — supply lebih dari 2x demand di order book",
         "Data top_buy_7d terpotong, BQ (Korea Investment) dominan akumulasi 7d tapi perlu konfirmasi apakah masih berlanjut atau sudah selesai fase akumulasi"
       ],
-      "ticker": "UDNG",
-      "timestamp": "2026-06-15T18:05:37.673926",
-      "verdict": "REJECT"
+      "timestamp": "2026-06-15T18:05:37.673926"
     },
     "BJTM": {
-      "key_strength": "AK (UBS Sekuritas) konsisten top buyer 1d/7d/30d dengan net akumulasi besar dan avg buy di bawah harga saat ini — persistent quiet accumulator tier-1 asing yang sangat kredibel sebagai sinyal smart money; didukung CC (Mandiri Sekuritas) dan NI (BNI Sekuritas) sebagai co-accumulator institusi lokal BUMN, membentuk pola 'institutional convergence' yang solid untuk saham perbankan daerah BJTM.",
       "reason": "AK (UBS Sekuritas) tier-1 asing dominan sebagai top buyer konsisten 1d, 7d, dan 30d dengan net akumulasi besar — sinyal smart money institutional accumulation yang kuat. Wyckoff phase mengarah ke akumulasi (B/B*) dengan volume normal dan harga breakout tipis dari 515 ke 525.",
       "confidence": 72,
+      "key_strength": "AK (UBS Sekuritas) konsisten top buyer 1d/7d/30d dengan net akumulasi besar dan avg buy di bawah harga saat ini — persistent quiet accumulator tier-1 asing yang sangat kredibel sebagai sinyal smart money; didukung CC (Mandiri Sekuritas) dan NI (BNI Sekuritas) sebagai co-accumulator institusi lokal BUMN, membentuk pola 'institutional convergence' yang solid untuk saham perbankan daerah BJTM.",
+      "ticker": "BJTM",
+      "verdict": "APPROVE",
       "risk_flags": [
         "BQ (Korea Investment) net sell -911M dalam 1d dengan freq rendah (201 sell vs 11 buy) — kemungkinan distribusi institusi asing via broker lokal Korea, perlu diwaspadai",
         "YU (CGS International) net sell -571M dengan asimetri ekstrem (75 sell vs 2 buy) — indikasi distribusi asing terselubung, bukan retail biasa",
@@ -33,14 +35,14 @@
         "bid_offer_ratio sangat lemah 0.456 (offer 27007 vs bid 12322) — tekanan jual masih dominan di order book, harga bisa pullback ke 515-520",
         "Harga saat ini di 525 = level offer tipis, risiko rejection jangka pendek jika buyer institusi tidak agresif besok pagi"
       ],
-      "ticker": "BJTM",
-      "timestamp": "2026-06-15T18:06:09.724323",
-      "verdict": "APPROVE"
+      "timestamp": "2026-06-15T18:06:09.724323"
     },
     "TOTL": {
-      "key_strength": "ZP (Maybank) net buy +2.2B dalam 1 hari dengan 656 buy freq vs 5 sell freq — dominasi institusi tier-1 lokal yang sangat agresif absorb supply; dikombinasikan bid/offer ratio 122:1 (total_bid 2089 vs total_offer 17) menunjukkan supply sudah sangat tipis dan demand terkonsentrasi di institusi, bukan retail FOMO. BB sebagai top buyer 7d net +6B menunjukkan akumulasi strategis multi-hari.",
       "reason": "Akumulasi kuat dari broker institusi tier-1 asing (ZP/Maybank net +2.2B, AK/UBS net +270M, BK/JPMorgan net +193M, YU/CGS net +163M) pada 1d dengan bid/offer ratio ekstrem 122x menunjukkan smart money agresif absorb supply. Namun KZ (CLSA) net sell -582M 1d dan BB (Verdhana) net sell 1d perlu diwaspadai sebagai potential distribusi parsial atau profit taking institusi.",
       "confidence": 72,
+      "key_strength": "ZP (Maybank) net buy +2.2B dalam 1 hari dengan 656 buy freq vs 5 sell freq — dominasi institusi tier-1 lokal yang sangat agresif absorb supply; dikombinasikan bid/offer ratio 122:1 (total_bid 2089 vs total_offer 17) menunjukkan supply sudah sangat tipis dan demand terkonsentrasi di institusi, bukan retail FOMO. BB sebagai top buyer 7d net +6B menunjukkan akumulasi strategis multi-hari.",
+      "ticker": "TOTL",
+      "verdict": "APPROVE",
       "risk_flags": [
         "KZ (CLSA) tier-1 asing full seller 1d — net -582M dengan 0 buy, 495 sell freq — kemungkinan institusi asing partial exit atau hedging, kontradiktif dengan buyer institusi lain",
         "YJ (Lotus Andalan) net sell -437M 1d dengan 0 buy dan sell avg 1071 (di bawah close 1080) — pola distribusi ke harga lebih rendah, possible lot besar dilepas",
@@ -48,9 +50,7 @@
         "BB (Verdhana) anomali: top buyer 7d net +6B TAPI net seller 1d -514M — pola switching dari accumulator ke distributor, perlu dikonfirmasi apakah ini profit taking atau awal distribusi",
         "Data broker_enrichment 7d/30d tidak lengkap — analisis concentration_7d dan persistent accumulator tidak bisa dikonfirmasi penuh"
       ],
-      "ticker": "TOTL",
-      "timestamp": "2026-06-15T18:06:46.267974",
-      "verdict": "APPROVE"
+      "timestamp": "2026-06-15T18:06:46.267974"
     }
   }
 }
