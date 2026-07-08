@@ -70,6 +70,40 @@ file `fixes/report_fixes.py` (ambil/lihat sebagai referensi). Terapkan:
     jangan diumpankan ke verdict.
 
 ================================================================
+TUGAS D — OUTCOME TRACKER (kalibrasi sinyal ke kenyataan)
+================================================================
+Saat ini bot tidak pernah mencatat apa yang terjadi SETELAH sinyal keluar,
+sehingga confidence tidak terkalibrasi dan win-rate tidak akan pernah
+bermakna. Bangun outcome tracker:
+
+1. SIMPAN ENTRY: setiap sinyal (semua verdict, bukan cuma APPROVE) dicatat
+   dengan: ticker, tanggal, verdict, confidence, harga close saat sinyal.
+   Simpan di file tracking (mis. `export/outcomes.json` di repo
+   idx-screener-output, atau file lokal bot — pilih yang paling pas dengan
+   arsitektur yang kamu temukan).
+
+2. UPDATE HARIAN: pada tiap run harian, untuk setiap sinyal yang belum
+   lengkap outcomenya, ambil harga close terbaru dari Invezgo dan isi
+   return T+1, T+3, T+5 (pct change vs harga entry). Setelah T+5 terisi,
+   tandai sinyal itu CLOSED.
+
+3. SKOR PER VERDICT:
+   - APPROVE dianggap WIN jika return T+5 > 0 (threshold bisa disesuaikan).
+   - REJECT dianggap "benar" jika return T+5 <= 0 (bot benar menghindari).
+   - NEUTRAL tidak diskor, hanya dicatat.
+
+4. INTEGRASI WEEKLY REPORT: weekly report membaca outcome tracker ini —
+   win rate dihitung HANYA dari sinyal CLOSED (nyambung dengan fix #9:
+   closed==0 -> "N/A"). Tambahkan juga:
+   - hit-rate APPROVE vs hit-rate REJECT (terpisah),
+   - rata-rata return T+5 per verdict,
+   - kalibrasi confidence: rata-rata confidence sinyal yang benar vs salah.
+
+5. BACKFILL: untuk sinyal historis di export/*.json (11-19 Jun dst), backfill
+   outcome pakai data harga historis Invezgo bila tersedia, supaya evaluasi
+   bisa langsung mulai dengan sampel yang ada.
+
+================================================================
 ATURAN
 ================================================================
 - Kerjakan A → B → C berurutan. Lapor temuan tiap tahap sebelum perubahan besar.
