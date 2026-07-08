@@ -1,0 +1,199 @@
+{
+  "outcomes": {
+    "2026-06-11:JTPE": {
+      "ticker": "JTPE",
+      "signal_date": "2026-06-11",
+      "verdict": "REJECT",
+      "confidence": 78,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-11:TSPC": {
+      "ticker": "TSPC",
+      "signal_date": "2026-06-11",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-12:BUVA": {
+      "ticker": "BUVA",
+      "signal_date": "2026-06-12",
+      "verdict": "APPROVE",
+      "confidence": 72,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-12:TSPC": {
+      "ticker": "TSPC",
+      "signal_date": "2026-06-12",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-12:CMNT": {
+      "ticker": "CMNT",
+      "signal_date": "2026-06-12",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-12:MGRO": {
+      "ticker": "MGRO",
+      "signal_date": "2026-06-12",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-15:UDNG": {
+      "ticker": "UDNG",
+      "signal_date": "2026-06-15",
+      "verdict": "REJECT",
+      "confidence": 78,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-15:BJTM": {
+      "ticker": "BJTM",
+      "signal_date": "2026-06-15",
+      "verdict": "APPROVE",
+      "confidence": 72,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-15:TOTL": {
+      "ticker": "TOTL",
+      "signal_date": "2026-06-15",
+      "verdict": "APPROVE",
+      "confidence": 72,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-18:MGRO": {
+      "ticker": "MGRO",
+      "signal_date": "2026-06-18",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-18:LUCY": {
+      "ticker": "LUCY",
+      "signal_date": "2026-06-18",
+      "verdict": "REJECT",
+      "confidence": 78,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-18:ASGR": {
+      "ticker": "ASGR",
+      "signal_date": "2026-06-18",
+      "verdict": "APPROVE",
+      "confidence": 78,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-19:LUCY": {
+      "ticker": "LUCY",
+      "signal_date": "2026-06-19",
+      "verdict": "REJECT",
+      "confidence": 85,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-19:ASGR": {
+      "ticker": "ASGR",
+      "signal_date": "2026-06-19",
+      "verdict": "NEUTRAL",
+      "confidence": 68,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    },
+    "2026-06-19:MGRO": {
+      "ticker": "MGRO",
+      "signal_date": "2026-06-19",
+      "verdict": "NEUTRAL",
+      "confidence": 65,
+      "entry_price": null,
+      "returns": {
+        "t1": null,
+        "t3": null,
+        "t5": null
+      },
+      "status": "OPEN"
+    }
+  }
+}
