@@ -1,205 +1,181 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "source": "idx-bandarmologi screener (Remora framework)",
-  "generated_at": "2026-11-05T18:12:01.757199",
-  "signal_count": 10,
+  "generated_at": "2026-11-06T18:12:02.083179",
+  "signal_count": 9,
   "signals": {
     "PGEO": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib REJECT semua long entry",
-        "CC (Mandiri Sekuritas) net sell -Rp2.45B/1d, freq jual 481 vs beli 190 — distribusi tier-1 masif",
-        "AK (UBS) net sell -Rp2.22B/1d, freq jual 611 vs beli 79 — distribusi tier-1 sangat agresif",
-        "Tape BEARISH: buy_sell_ratio 0.86, net vol -895K; distribusi menumpuk di harga bawah 950/945/940 dekat close",
-        "Close = POC (950) dengan net sell di level tersebut -1.2M vol — breakdown signal",
-        "Depth offer 44.4K lot vs bid 29.4K lot (depth ratio 0.66) — tekanan jual lebih besar di buku dalam",
-        "No scheduled catalyst — tidak ada katalis terjadwal yang bisa absorb tekanan jual",
-        "Float TIGHT 11.18% + distribusi = HARD TRAP: bandar keluar duluan, ritel nyangkut",
-        "Insider signal NEUTRAL (tidak ada transaksi 120 hari) — tidak ada konfirmasi owner taruh uang"
-      ],
-      "timestamp": "2026-11-05T18:05:30.498098",
       "confidence": 92,
-      "key_strength": "DX (Bahana) net beli +Rp1.48B/1d dan ZP (Maybank) net beli +Rp861M/1d — ada akumulasi tier-1, namun TENGGELAM oleh distribusi CC+AK yang jauh lebih besar (net gabungan -Rp4.67B)",
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% → aturan wajib REJECT semua long entry",
+        "BID_WALL_TRAP: b/o 2.18 TAPI harga -2.1% hari ini = umpan/jebakan, bid tebal tidak kredibel",
+        "UBS (AK) tier-1 asing net sell -135.6M dalam 1d = distribusi institusi besar terkonfirmasi",
+        "JP Morgan (BK) tier-1 asing net sell -46.4M dalam 1d = konfirmasi distribusi institusi",
+        "PD (Indo Premier/retail aggregator) net sell -859.9M = retail panik/distribusi masif via IPOT",
+        "Tape BULLISH_TAPE 1.32 TAPI berlawanan dengan dominannya net sell tier-1 — tape mungkin menyesatkan di crash regime",
+        "Float TIGHT 11.18% → kalau bandar keluar, harga bisa jatuh cepat tanpa buyer",
+        "NO_SCHEDULED_CATALYST → tidak ada katalis terjadwal yang justifikasi akumulasi",
+        "Volume hari ini hanya 22.7% dari rata-rata 20d (vol_ratio 0.227) → likuiditas sangat rendah, mudah dimanipulasi"
+      ],
+      "timestamp": "2026-11-06T18:05:29.535032",
+      "reason": "MARKET CRASH (-17.45%) = SKIP ALL; tier-1 UBS (AK) net sell -135M + JPM (BK) net sell -46M hari ini; PD retail net sell -860M = distribusi masif; sinyal mixed override APPROVE.",
+      "key_strength": "Tape bullish (buy_sell_ratio 1.32) dengan akumulasi di 930-940, DH Sinarmas net buy +178M (jual NOL), HP Henan Putihrai net buy +194M — namun semua ini TIDAK CUKUP melawan crash regime + distribusi tier-1 asing berlawanan.",
       "ticker": "PGEO",
-      "reason": "IHSG CRASH -18.43% = hard skip semua long entry; ditambah distribusi tier-1 CC -Rp2.45B + AK -Rp2.22B hari ini, tape BEARISH (ratio 0.86), close = POC distribusi 950, kedalaman offer 44K vs bid 29K.",
-      "verdict": "REJECT"
-    },
-    "BSSR": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "BEARISH TAPE: buy_sell_ratio 0.49, distribusi menumpuk di 4990/4970 (POC = 4990, close = POC = distribusi)",
-        "YU (CGS) net sell -1.55B 1d, frekuensi jual 517 vs beli 8 — institutional distribution masif",
-        "AK (UBS) net sell -712M 1d — tier-1 asing distribusi",
-        "ZP (Maybank) net sell -421M 1d — broker tier-1 distribusi",
-        "NI (BNI Sek) net sell -1.58B 1d — heavy selling",
-        "BK (JP Morgan) net sell -238M 1d — tier-1 jual",
-        "PD (Indo Premier/retail) di top buyer = retail aggregator masuk, smart money keluar",
-        "Float ULTRA_TIGHT 9.26%: bandar keluar duluan ritel nyangkut, risiko ARB turun cepat",
-        "NO scheduled catalyst — tidak ada alasan fundamental terjadwal untuk support harga",
-        "Big public blocks terkonsentrasi (Tata Power 26%, GS Energy 9.74%, PT GS Global 5%) = risiko dominated exit"
-      ],
-      "timestamp": "2026-11-05T18:05:53.761846",
-      "confidence": 95,
-      "key_strength": "CC (Mandiri Sek) net buy +1.14B 1d dan depth bid 7081 vs offer 4017 (ratio 1.76) — satu-satunya sinyal positif, namun KALAH TELAK oleh distribusi broker tier-1 asing yang berlawanan arah",
-      "ticker": "BSSR",
-      "reason": "MARKET CRASH IHSG -18.43% = hard skip semua long; tape BEARISH (ratio 0.49, distribusi tumpuk di close 4990); tier-1 (YU, AK, ZP, BK, NI) net sell masif 1d; NO catalyst; float ultra-tight hanya memperparah risiko exit.",
-      "verdict": "REJECT"
-    },
-    "LSIP": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "BK (JP Morgan) net sell -940.9 juta 1d (freq jual 138 vs beli 49) — distribusi institusi tier-1 asing besar",
-        "YU (CGS International) net sell -682 juta 1d — broker tier-1 distribusi",
-        "CC (Mandiri Sekuritas) net sell -409 juta 1d — broker tier-1 lokal distribusi",
-        "KK (Phillip Sekuritas) net sell -764 juta 1d, beli NOL — low-freq high-value sell (44 freq, jual bersih penuh)",
-        "TP (OCBC) net sell -515 juta 1d, beli hanya 2 freq — institusi buang barang",
-        "AK (UBS) net_freq -145: beli 71 freq vs jual 216 freq meski net value tipis positif — volume jual dominan",
-        "Sinyal MIXED: DX+HP akumulasi besar 1d TAPI diimbangi distribusi 5 broker tier-1 berlawanan — no edge",
-        "Depth book: offer (17.703 lot) >> bid (11.201 lot), ratio 0.63 — tekanan jual lebih dalam di buku",
-        "NO_SCHEDULED_CATALYST: tidak ada katalis terjadwal yang mendukung tesis akumulasi",
-        "Tape bullish (ratio 1.65) TAPI berlawanan dengan dominasi distribusi broker tier-1 di sisi flow — percayai broker flow"
-      ],
-      "timestamp": "2026-11-05T18:06:17.033874",
-      "confidence": 92,
-      "key_strength": "Tape EOD bullish (buy/sell ratio 1.65, net vol +1.265 juta), DX (Bahana) net beli +1.74 miliar dan HP (Henan Putihrai) net beli +1.71 miliar 1d dengan freq beli dominan — namun TIDAK CUKUP melawan crash regime + multi-broker tier-1 distribusi",
-      "ticker": "LSIP",
-      "reason": "MARKET REGIME CRASH (IHSG -18.43%) = HARD REJECT semua long entry. Tambahan: BK (JP Morgan) net sell -941 juta 1d, YU (CGS) -682 juta, CC (Mandiri) -409 juta — distribusi tier-1 dominan berlawanan dengan akumulasi DX/HP.",
-      "verdict": "REJECT"
-    },
-    "AALI": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "BID_WALL_TRAP: bid/offer 3.14 TAPI harga -2.4% hari ini = bid umpan/jebakan, jangan kredit ketebalan bid",
-        "CC (Mandiri Sek) net sell -3.36B 1d — tier-1 distribusi agresif",
-        "AK (UBS) net sell -2.1B 1d — tier-1 asing distribusi",
-        "KI (Ciptadana) net sell -2.64B 1d — zero buy, full distribusi",
-        "BK (JP Morgan) net sell -1.1B 1d — tier-1 asing net jual",
-        "CP (KB Valbury) net sell -4.15B 1d — distribusi terbesar hari ini",
-        "BEARISH_TAPE: buy/sell ratio 0.77, net vol -305.400 lbr, distribusi menumpuk di 9325-9400 (dekat close)",
-        "Close 9300 DI BAWAH point-of-control 9400 + net sell = distribusi konfirmasi",
-        "Post-dividend (cum 8 Okt, sudah ex -28 hari) — tidak ada katalis terjadwal ke depan",
-        "NO_SCHEDULED_CATALYST: tidak ada pemicu fundamental jangka dekat"
-      ],
-      "timestamp": "2026-11-05T18:06:38.924389",
-      "confidence": 95,
-      "key_strength": "DX (Bahana) net beli +5.17B dan SQ (BCA Sek) net beli +4.71B 1d — ada akumulasi tier-1 lokal, namun TERTIMPA distribusi tier-1 lain yang lebih besar dan regime CRASH; sinyal mixed tidak cukup jadi dasar entry.",
-      "ticker": "AALI",
-      "reason": "CRASH regime IHSG -18.43% + distribusi tier-1 masif (CC -3.36B, AK -2.1B, BK -1.1B, KI -2.64B) + BEARISH_TAPE (buy/sell 0.77) + bid tebal tapi harga -2.4% = BID_WALL_TRAP. No entry.",
-      "verdict": "REJECT"
-    },
-    "CMRY": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "BK (JP Morgan) net sell -1.22B hari ini, 0 beli, 411 freq jual — distribusi institusi tier-1 murni",
-        "TP (OCBC) net sell -1.30B hari ini, 0 beli, 346 freq jual — distribusi institusi tier-1 murni",
-        "Sinyal MIXED: YU/DP/AZ/ZP/RX beli vs BK/TP institusi tier-1 jual besar — akumulasi + distribusi berlawanan = NO EDGE",
-        "Retail (XL/XC/YP) net sell total ~-644M — bisa panic ATAU distribusi via retail aggregator",
-        "Float TIGHT 19.28% + distribusi institusi = HARD TRAP jika bandar keluar duluan",
-        "NO_SCHEDULED_CATALYST: tidak ada katalis terjadwal yang mendukung tesis akumulasi",
-        "suspect_backfill BAMBANG SUTANTIO 0->6.3% — artefak data, BUKAN konfirmasi akumulasi",
-        "Harga naik +6.65% tapi institusi tier-1 jual besar = kemungkinan markup untuk distribusi"
-      ],
-      "timestamp": "2026-11-05T18:07:01.030280",
-      "confidence": 88,
-      "key_strength": "Tape BULLISH (buy_sell_ratio 1.83), close 4330 di atas POC 4250, YU (CGS) + DP (DBS) + AZ (Sucor) + RX (Macquarie) net beli hari ini — TAPI tidak cukup melawan CRASH regime + distribusi BK/TP tier-1",
-      "ticker": "CMRY",
-      "reason": "MARKET REGIME CRASH (IHSG -18.43%) = HARD REJECT semua long entry. BK (JP Morgan) net sell -1.22B hari ini + TP (OCBC) net sell -1.30B = distribusi tier-1 besar berlawanan akumulasi.",
-      "verdict": "REJECT"
-    },
-    "ERAA": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES tanpa pengecualian",
-        "AK (UBS) net sell -5.33B hari ini, freq jual 1270 vs beli 362 — distribusi institusi tier-1 masif",
-        "BK (JP Morgan) net sell -1.56B hari ini — tier-1 asing kedua ikut distribusi",
-        "ZP (Maybank) net sell -1.37B hari ini — broker institusi ketiga distribusi searah",
-        "BEARISH_TAPE: buy_sell_ratio 0.79, net vol -7.67 juta — jual dominan di tape nyata",
-        "Distribusi menumpuk di harga 490-496 (dekat close 494) = breakdown signal",
-        "depth_ratio 0.54 (offer >> bid di buku dalam) vs L1 ratio 0.15 — tekanan jual struktural di semua level",
-        "Insider buy via Program MESOP — BUKAN pembelian pasar, mekanistis, tidak boleh dibaca akumulasi",
-        "Vol ratio 0.53 (di bawah rata-rata 20d) = tidak ada momentum partisipasi",
-        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang bisa mendukung rebound"
-      ],
-      "timestamp": "2026-11-05T18:07:22.969658",
-      "confidence": 92,
-      "key_strength": "CC (Mandiri) net +939M dan TP (OCBC) net +907M sisi beli hari ini — namun JAUH kalah besar vs distribusi UBS+JPM+Maybank total -8.26B; bukan sinyal cukup untuk lawan crash market + distribusi tier-1.",
-      "ticker": "ERAA",
-      "reason": "MARKET CRASH IHSG -18.43% = HARD REJECT semua long entry. Tape BEARISH (ratio 0.79), AK (UBS) distribusi -5.33B + BK (JPM) -1.56B + ZP -1.37B hari ini = tier-1 buang massal.",
       "verdict": "REJECT"
     },
     "PWON": {
+      "confidence": 92,
       "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "YU (CGS) net sell -Rp2.75B/1d dengan freq jual 785 — distribusi tier-1 masif",
-        "ZP (Maybank) net sell -Rp1.97B/1d dengan freq jual 677 — distribusi tier-1 masif",
-        "AI (UOB Kay Hian) net sell -Rp389M/1d, jual NOL beli — distribusi institusi murni",
-        "BEARISH_TAPE: buy/sell ratio 0.68, distribusi menumpuk di 258/256/260 (level bawah dekat close)",
-        "Close 258 di BAWAH POC 260 + net sell = distribusi konfirmasi teknikal",
-        "Volume 38.6M vs avg 74.1M (vol_ratio 0.52) — partisipasi rendah di tengah distribusi = tidak ada absorpsi",
-        "AK (UBS) net_freq -83 (lebih banyak frekuensi jual) meski net value positif — crossing suspek",
-        "NO_SCHEDULED_CATALYST — tidak ada katalis yang justifikasi akumulasi",
-        "Insider: NEUTRAL (nol aktivitas 120 hari) — tidak ada konviksi owner"
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib REJECT semua long entry",
+        "ZP (Maybank) net sell -3.17B/1d, freq jual 714 — distribusi tier-1 masif hari ini",
+        "YU (CGS) net sell -2.62B/1d, freq jual 1147 — distribusi tier-1 masif hari ini",
+        "Tape BEARISH: buy_sell_ratio 0.90, net vol -1.91jt lot, distribusi -6.92jt lot di harga 254 (dekat close)",
+        "Volume hanya 0.51x avg 20d — konfirmasi akumulasi lemah, tidak ada conviction buyer dominan",
+        "Sinyal MIXED: RX+CC+AK beli vs ZP+YU jual besar = no edge, distribusi tier-1 berlawanan",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang bisa justify entry di market crash",
+        "Insider signal NEUTRAL (0 buy/sell 120d) — tidak ada konfirmasi owner taruh uang sendiri"
       ],
-      "timestamp": "2026-11-05T18:08:04.100370",
-      "confidence": 95,
-      "key_strength": "RX (Macquarie) net buy +Rp2.5B/1d murni (jual nol, freq 739) — satu-satunya sinyal positif, namun TIDAK cukup melawan distribusi YU+ZP+AI+tape bearish+market crash",
+      "timestamp": "2026-11-06T18:05:51.361581",
+      "reason": "MARKET REGIME CRASH (IHSG -17.45%) = SKIP ALL ENTRIES; ZP net sell -3.17B + YU net sell -2.62B hari ini = distribusi tier-1 besar berlawanan dengan akumulasi AK/CC/RX.",
+      "key_strength": "RX (Macquarie) net buy +2.02B/1d jual NOL + CC (Mandiri) +1.75B + AK (UBS) +1.30B — trio tier-1 akumulasi 1 hari, tapi TIDAK CUKUP melawan crash regime + distribusi ZP/YU yang lebih besar + tape net sell",
       "ticker": "PWON",
-      "reason": "IHSG CRASH (-18.43%) = hard reject semua long entry. Tape BEARISH (ratio 0.68, distribusi dominan di harga bawah). YU+ZP net sell -Rp4.7B/1d (tier-1 distribusi). Semua sinyal searah turun.",
       "verdict": "REJECT"
     },
-    "BRMS": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "YU (CGS International) tier-1 net sell -4.86B/1d — distribusi institusi tier-1 signifikan",
-        "YP (Mirae/retail aggregator) net sell -6.78B/1d — retail exit atau distribusi via retail channel",
-        "Sinyal MIXED: CC +9.3B & AK +8.2B akumulasi vs YU+YP distribusi total -11.6B — berlawanan = no edge",
-        "L1 bid/offer ratio sangat tipis 0.276 (3.727 vs 13.494 lot offer) — penawaran jauh lebih tebal dari permintaan L1",
-        "Depth ratio 0.919 lebih seimbang tapi L1 timpang — potensi offer wall di 328",
-        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang justifikasi akumulasi",
-        "Float LIQUID 59.85% + big public blocks (Emirates Tarian 25.1%, GlasTrust 7.6%, Sugiman 7.45%) — risiko blok besar keluar",
-        "Distribusi tape di harga bawah (322-326) menumpuk -24.5M net vol — distribusi di bawah close",
-        "BK (JP Morgan) net_freq -394 (lebih banyak transaksi jual) meski net value tipis positif — anomali freq negatif"
-      ],
-      "timestamp": "2026-11-05T18:08:28.507460",
-      "confidence": 88,
-      "key_strength": "CC (Mandiri Sekuritas) net +9.3B & AK (UBS) net +8.2B keduanya tier-1 domestik/asing akumulasi 1d; insider DIREKSI Agoes Projosasmito beli 3x berturut (okt 2026, investasi); tape buy/sell ratio 1.14 (mendekati bullish threshold); close = POC 328 (sehat)",
-      "ticker": "BRMS",
-      "reason": "MARKET REGIME CRASH (IHSG -18.43%) = HARD REJECT semua long entry. Tambahan: YU (CGS tier-1) net sell -4.8B + YP retail net sell -6.8B berlawanan dengan akumulasi CC/AK — sinyal mixed di regime crash = no edge.",
-      "verdict": "REJECT"
-    },
-    "ICBP": {
-      "risk_flags": [
-        "MARKET REGIME CRASH: IHSG ret_20d -18.43% — aturan wajib SKIP ALL ENTRIES",
-        "AK (UBS Sekuritas) net sell -Rp29.18B/1d, freq jual 1997 vs beli 501 — distribusi tier-1 asing sangat masif, ini red flag terkuat",
-        "Retail agregator XC (Ajaib) -Rp4.32B, XL (Stockbit) -Rp3.27B, YP (Mirae) -Rp2.28B semua net sell — distribusi retail + panik",
-        "L1 bid/offer ratio sangat tipis: 0.147 (341 vs 2326 lot) — penawaran jual mendominasi L1",
-        "Depth bid/offer 0.664 — sisi offer masih lebih berat meski kedalaman lebih seimbang",
-        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang menjustifikasi entry di crash market",
-        "Tape bullish (ratio 1.34) BERLAWANAN dengan AK distribusi -29B — percaya tape broker besar, bukan snapshot intraday"
-      ],
-      "timestamp": "2026-11-05T18:08:49.274862",
+    "ERAA": {
       "confidence": 92,
-      "key_strength": "Tape BULLISH_TAPE (buy/sell ratio 1.34), close di POC 6125, ZP (Maybank) +Rp12.9B & CC (Mandiri) +Rp11.0B net buy tier-1 lokal — akumulasi ada, TAPI tidak cukup melawan CRASH regime + AK distribusi -29B",
-      "ticker": "ICBP",
-      "reason": "MARKET REGIME CRASH (IHSG -18.43%) = HARD REJECT semua long entry. AK (UBS) net sell -Rp29.2B hari ini (tier-1 asing distribusi masif) = double override.",
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib SKIP ALL LONG ENTRIES",
+        "BK (JP Morgan tier-1) net sell -1.14B hari ini dengan sell_freq 496 vs buy_freq 99 — distribusi institusi tier-1 aktif",
+        "ZP (Maybank) net sell murni -494M hari ini, buy_freq=0 (jual satu arah)",
+        "EP (MNC Sekuritas) net sell -1.087B, freq jual 140 vs beli 7 — distribusi terkonsentrasi",
+        "Tape BEARISH: buy_sell_ratio 0.93, distribusi menumpuk di 488/480/484 (level bawah dekat close), POC di 484 dan close di 492 tapi net_vol masih -1.3M",
+        "XL (Stockbit retail) + YP (Mirae retail) keduanya net sell — retail buang, bukan ritel beli",
+        "Vol ratio hanya 0.28x avg — volume sangat rendah, tidak ada conviction beli",
+        "Insider buy adalah MESOP (program opsi karyawan/direksi), BUKAN pembelian pasar terbuka — bukan sinyal akumulasi murni",
+        "NO_SCHEDULED_CATALYST: tidak ada katalis terjadwal untuk support harga"
+      ],
+      "timestamp": "2026-11-06T18:06:14.611283",
+      "reason": "MARKET REGIME CRASH (IHSG -17.45%) = SKIP ALL ENTRIES; ditambah BK (JP Morgan) net sell -1.14B hari ini, ZP (Maybank) net sell murni, tape BEARISH (ratio 0.93, distribusi menumpuk di harga bawah 480-488), dan bid/offer depth menunjukkan tekanan offer lebih berat.",
+      "key_strength": "CC (Mandiri Sekuritas) net buy +2.34B dan DX (Bahana Sekuritas) net buy +1.03B dengan JUAL NOL hari ini — ada akumulasi tier-1 lokal. Namun tidak cukup melawan market crash + distribusi BK/ZP/EP.",
+      "ticker": "ERAA",
       "verdict": "REJECT"
     },
-    "MARK": {
-      "risk_flags": [
-        "MARKET CRASH: IHSG ret_20d -18.43% — aturan SKIP ALL LONG ENTRIES berlaku absolute",
-        "BK (JP Morgan) net sell -458M/1d, freq jual 187 vs beli 26 — distribusi institusi asing tier-1 jelas",
-        "CC (Mandiri) net sell -451M/1d, OD (BRI Danareksa) -460M/1d — 3 broker tier-1 net sell bersamaan",
-        "BEARISH_TAPE: buy/sell ratio 0.61, net vol -2.57M lot, distribusi di 985/1005/995 menumpuk dekat close",
-        "Close = POC (990) + net sell = distribusi di titik volume terbesar, bukan markup",
-        "Float TIGHT 19.73% dengan big_public_blocks PT Dyna Capital 20.7% + PT Mark Capital 15.39% — risiko konsentrasi dan exit trap",
-        "Depth buku dalam: bid 30.799 lot vs offer 4.883 lot — TAPI tape net sell 0.61 → bid tebal kemungkinan umpan (aturan silang tape vs bid)",
-        "Insider signal NEUTRAL (nol aktivitas 120 hari) — tidak ada konfirmasi 'siapa' di balik akumulasi",
-        "Dividend cum-date 7 hari: post-ex biasanya tekanan jual, bukan katalis beli di CRASH market",
-        "🏷️ PRE-DIVIDEND: 7d sebelum cum-date — run-up dividend hunter (main before dividen OK) — momentum bisa didorong dividend hunter (main-before-dividen tetap valid, tidak dipenalti)"
-      ],
-      "timestamp": "2026-11-05T18:09:15.494355",
+    "LSIP": {
       "confidence": 92,
-      "key_strength": "HP (Henan Putihrai) net buy +731M/1d dengan jual NOL (47 freq beli, 0 jual) — satu-satunya akumulasi bersih, namun broker lokal tier-2 tidak cukup melawan distribusi 3 tier-1 sekaligus di CRASH market",
-      "ticker": "MARK",
-      "reason": "MARKET CRASH (-18.43%) = SKIP ALL ENTRIES. Distribusi tier-1 dominan: BK (JPMorgan) net sell -458M/1d, CC (Mandiri) net sell -451M/1d, OD (BRI Danareksa) -460M/1d. Tape BEARISH (buy/sell ratio 0.61), distribusi menumpuk di harga bawah dekat close 990. Sinyal mixed: akumulasi HP/CP vs distribusi 3 broker tier-1 sekaligus.",
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib REJECT semua long entry",
+        "YU (CGS International) net sell -1.67B hari ini, tier-1 asing distribusi",
+        "KK (Phillip) net sell -3.1B dengan freq jual tinggi (356) — distribusi ritel/institusi lokal masif",
+        "Bid/offer L1 ekstrem timpang: 31 lot bid vs 4020 lot offer — supply menumpuk di offer meski tape bullish",
+        "Depth offer (15796 lot) vs bid (17835 lot) tipis, harga sudah naik 3.44% hari ini — rawan profit taking besok",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang mendukung tesis akumulasi",
+        "Insider signal NEUTRAL (tidak ada insider buy) — tidak ada konfirmasi siapa bandarnya"
+      ],
+      "timestamp": "2026-11-06T18:06:33.051888",
+      "reason": "MARKET REGIME CRASH (IHSG -17.45%) = SKIP ALL ENTRIES; aturan override absolut, tidak ada long entry apapun kondisinya.",
+      "key_strength": "RX (Macquarie) net buy +4.14B hari ini dengan JUAL NOL — akumulasi satu arah tier-1 asing nyata. AK (UBS) +1.42B, BK (JP Morgan) +0.97B. Tape BULLISH ratio 1.82 dengan POC dan close sama di 1505. Namun semua kekuatan ini tidak relevan dalam regime CRASH.",
+      "ticker": "LSIP",
+      "verdict": "REJECT"
+    },
+    "AALI": {
+      "confidence": 92,
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib SKIP ALL LONG ENTRIES",
+        "YU (CGS International) net sell -2.84B/1d, tier-1 asing distribusi agresif, low-freq high-value (34 freq jual 307K lot)",
+        "CC (Mandiri Sekuritas) net sell -1.38B/1d — broker institusi tier-1 lokal distribusi",
+        "KK (Phillip Sekuritas) net sell -1.12B/1d — tambahan distribusi institusi",
+        "PD (Indo Premier/IPOT) net sell -578M/1d — retail aggregator jual (konfirmasi tekanan ritel pun sell)",
+        "XL (Stockbit) net sell -481M/1d — retail aggregator ikut jual",
+        "SINYAL MIXED: akumulasi SQ (+4.1B) berlawanan dengan distribusi 3 broker tier-1 secara bersamaan = NO EDGE",
+        "Dividend sudah post-ex (-29 hari) — tidak ada katalis terjadwal ke depan",
+        "Vol ratio 0.36 (hanya 36% dari avg 20d) — volume sangat sepi, tidak ada momentum",
+        "Tape NEUTRAL (buy_sell_ratio 1.14, belum bullish): distribusi terbesar di harga 9300 (-312.5K lot net), level bawah = tanda tekanan jual"
+      ],
+      "timestamp": "2026-11-06T18:06:53.208116",
+      "reason": "MARKET REGIME CRASH (IHSG -17.45%) = SKIP ALL ENTRIES. Distribusi tier-1 YU (-2.84B) + CC (-1.38B) berlawanan akumulasi SQ; sinyal mixed di crash market.",
+      "key_strength": "SQ (BCA Sekuritas) net buy +4.12B/1d dengan freq tinggi (193 buy, 14 sell) — potensi akumulasi quiet accumulator; depth ratio 2.45 (bid lebih tebal dari offer di buku dalam); close di atas POC 9425",
+      "ticker": "AALI",
+      "verdict": "REJECT"
+    },
+    "BSSR": {
+      "confidence": 92,
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib REJECT semua long entry",
+        "AK (UBS Sekuritas) net sell -1.8B/1d, freq jual 348 vs beli 15 — distribusi tier-1 masif, hard reject override",
+        "BEARISH_TAPE: buy_sell_ratio 0.73, net vol -247.300 lot, distribusi menumpuk di harga bawah (4900/4950/5000)",
+        "Close 4990 di bawah/sama dengan POC 5000 + net sell = distribusi konfirmasi",
+        "IF (Samuel Sekuritas) net sell -177M/1d, freq jual 5 vs beli 1 = low-freq high-value sell institusi",
+        "OD (BRI Danareksa) net sell -200M/1d — broker institusi lokal distribusi",
+        "ULTRA_TIGHT float 9.26% + distribusi tier-1 = HARD TRAP, harga bisa jatuh cepat",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal untuk support harga",
+        "CC (Mandiri Sekuritas) net_freq -247 (lebih banyak jual-count) meski net_value positif — indikasi crossing/marking bukan akumulasi murni",
+        "Insider: NEUTRAL, tidak ada insider buy konfirmasi"
+      ],
+      "timestamp": "2026-11-06T18:07:16.349932",
+      "reason": "MARKET REGIME CRASH (-17.45%) = SKIP ALL ENTRIES. Tambahan: AK (UBS) net sell -1.8B/1d tier-1 distribusi, tape BEARISH (ratio 0.73), close di bawah POC, bid/offer L1 sangat tipis.",
+      "key_strength": "CC (Mandiri Sekuritas) net value +1.63B/1d dan depth_ratio 2.47 (bid lebih tebal dari offer di kedalaman 10 level) — NAMUN sinyal ini TIDAK cukup melawan distribusi UBS tier-1 + market crash",
+      "ticker": "BSSR",
+      "verdict": "REJECT"
+    },
+    "CMRY": {
+      "confidence": 92,
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% → aturan wajib SKIP ALL ENTRIES",
+        "KZ (CLSA) net sell -1,076B/1d, jual 252.600 lembar tanpa beli selembar pun = distribusi institusi tier-1 bersih",
+        "BB (Verdhana) net sell -372M/1d, BK (JPMorgan) net sell -354M/1d = tiga broker asing tier-1 kompak distribusi",
+        "BID_WALL_TRAP: b/o L1 69.2 TAPI harga turun -1.85% = bid tebal adalah umpan/jebakan (konfirmasi aturan Hengky)",
+        "Depth 10-level bid 533 lot vs offer 629 lot (ratio 0.847) — kedalaman buku BERLAWANAN dengan L1, bias jual di buku dalam",
+        "Close 4.250 di BAWAH POC 4.270, distribusi terdeteksi di 4.290 (-32.900 net) dan 4.270 (-13.900 net) dekat close = tape breakdown",
+        "PD (IPOT/retail) net sell -251M/1d = retail mulai panik keluar, bukan akumulasi",
+        "Float TIGHT 19.28% + distribusi tier-1 = exit risk ekstrem; bandar keluar cepat bisa ARB turun tajam",
+        "NO_SCHEDULED_CATALYST: tidak ada katalis terjadwal yang bisa justify akumulasi",
+        "BAMBANG SUTANTIO 0→6.3% suspect_backfill (artefak data, bukan aksi korporasi nyata) — jangan pakai sebagai sinyal"
+      ],
+      "timestamp": "2026-11-06T18:07:40.266567",
+      "reason": "CRASH regime + distribusi tier-1 berlawanan (KZ -1,07B, BK -354M, BB -372M) melawan AK +1,62B; sinyal mixed di CRASH = NO EDGE, SKIP.",
+      "key_strength": "AK (UBS) net buy +1,62B/1d dan RX (Macquarie) +400M/1d adalah satu-satunya sinyal positif — TAPI tertutup habis oleh distribusi KZ+BB+BK+regime CRASH",
+      "ticker": "CMRY",
+      "verdict": "REJECT"
+    },
+    "DKFT": {
+      "confidence": 95,
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib SKIP ALL ENTRIES",
+        "BK (JP Morgan) tier-1 net sell -680M/1d dengan freq jual 298 vs beli 2 = distribusi institusi besar, HARD REJECT",
+        "BEARISH_TAPE ekstrem: buy_sell_ratio 0.31, net vol -3.85 juta, distribusi menumpuk di 700/685/680 dekat close",
+        "BID_WALL_TRAP: b/o L1 3.19 TAPI harga -2.84% = bid umpan/jebakan, JANGAN kredit ketebalan bid",
+        "XC (Ajaib retail) net sell -1.03B + XL (Stockbit) net sell -290M + YP net sell -254M = panic retail JUAL",
+        "NI (BNI Sekuritas) net sell -446M/1d, sell avg 699 vs close 685 = distribusi di harga atas",
+        "Close tepat di POC 685 dengan distribusi -930M s/d -1.9B di level bawah = breakdown signal",
+        "ZP (Maybank) beli besar 2.14B/1d tapi diimbangi distribusi tier-1 BK — sinyal mixed, aturan #1 → REJECT",
+        "No scheduled catalyst + CRASH regime = tidak ada alasan risk-on"
+      ],
+      "timestamp": "2026-11-06T18:08:01.686527",
+      "reason": "CRASH regime + tape bearish ekstrem (buy_sell_ratio 0.31) + BK (JP Morgan) net sell -680M hari ini + distribusi masif di harga bawah dekat close = jangan masuk.",
+      "key_strength": "ZP (Maybank) net beli 2.14B/1d tanpa jual (1 arah) + insider PENGENDALI PT Jinsheng Mining tambah 1.95% saham (ke 65.74%) per 7 Okt — struktural positif, TAPI tidak cukup melawan CRASH regime + distribusi BK tier-1 hari ini",
+      "ticker": "DKFT",
+      "verdict": "REJECT"
+    },
+    "DEWA": {
+      "confidence": 92,
+      "risk_flags": [
+        "MARKET REGIME CRASH: IHSG ret_20d -17.45% — aturan wajib SKIP ALL ENTRIES",
+        "CC (Mandiri Sekuritas) net sell -5.88B dalam 1d — distribusi tier-1 masif",
+        "BK (JP Morgan) net sell -3.05B, freq jual 520 vs beli 57 — low-freq high-value SELL institusi asing tier-1, HARD REJECT trigger",
+        "DX (Bahana Sekuritas) net sell -2.43B, freq jual 202 vs beli 15 — distribusi institusi terselubung sangat bersih",
+        "AK (UBS) net sell -1.67B — asing tier-1 keempat yang distribusi bersamaan",
+        "BEARISH_TAPE: buy/sell ratio 0.60, net volume -111.6 juta lembar, distribusi terbesar di 216 (-84.8M) dekat close",
+        "POC di 216 tapi close di 224 — close di ATAS POC dengan tape net sell = distribusi markup semu",
+        "L1 bid/offer 0.014 (sangat tipis) — meski depth 10 level seimbang (1.005), tape net sell konfirmasi penawaran bid L1 adalah UMPAN",
+        "YU (CGS) top buyer 1d: net_freq -112 (lebih banyak frekuensi jual) + CGS adalah pemegang saham >5% — potensi insider distribusi via broker afiliasi sendiri",
+        "PD (Indo Premier/IPOT) dan YP (Mirae) di top buyer = retail aggregator dominan di sisi beli — 'Sobat Cupu' menyerap distribusi institusi",
+        "No scheduled catalyst + no insider buy + no foreign accumulation = tidak ada katalis yang justify akumulasi apapun",
+        "Float LIQUID 71.86% — butuh dana sangat besar untuk markup, distribusi tier-1 bersamaan sangat mudah menekan harga"
+      ],
+      "timestamp": "2026-11-06T18:08:29.785915",
+      "reason": "CRASH regime + distribusi tier-1 masif (CC -5.9B, BK -3.0B, DX -2.4B, AK -1.7B) + BEARISH_TAPE (buy/sell 0.6, net vol -111M) = NO EDGE sama sekali.",
+      "key_strength": "Tidak ada kekuatan yang cukup untuk melawan regime CRASH + distribusi multi-broker tier-1 bersamaan. YU net buy +5.6B 1d satu-satunya positif, tapi YU (CGS) adalah pemegang >5% yang distribusi via afiliasi sendiri (net_freq negatif -112) — ini justru sinyal insider unloading.",
+      "ticker": "DEWA",
       "verdict": "REJECT"
     }
   }
