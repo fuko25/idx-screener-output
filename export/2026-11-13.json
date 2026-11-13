@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-13",
+  "source": "idx-bandarmologi screener (Remora framework)",
+  "generated_at": "2026-11-13T18:12:02.188993",
+  "signal_count": 4,
+  "signals": {
+    "BTPS": {
+      "timestamp": "2026-11-13T18:05:39.042917",
+      "key_strength": "CC (Mandiri Sekuritas) net buy +1.35B 1d dengan freq 462 (bukan low-freq) = institusi lokal tier-1 beli nyata; tape BULLISH_TAPE 1.46 dengan absorpsi di 1050/1035/1045 menunjukkan ada demand, tapi tidak cukup melawan distribusi broker asing",
+      "verdict": "REJECT",
+      "risk_flags": [
+        "AK (UBS Sekuritas) net sell -330.9M dalam 1d — broker tier-1 asing distribusi, hard reject trigger",
+        "ZP (Maybank) net sell -295.2M dalam 1d — institusi tier-1 lain ikut distribusi, pola konvergen",
+        "AZ (Sucor) net sell -343.3M dalam 1d, beli nol — satu arah jual murni",
+        "BID_WALL_TRAP aktif: b/o L1 18.77 tapi change -1.0%; depth buku dalam 0.63 (offer > bid) — bid umpan terkonfirmasi",
+        "Close 1035 di bawah POC 1045 + distribusi besar di 1040 (-353k net vol) — gagal tutup di volume node terbesar",
+        "Volume hari ini hanya 0.35x rata-rata 20 hari (3.07M vs avg 8.74M) — tidak ada conviction buyer masuk",
+        "AT (Phintraco) low-freq high-value: 3 transaksi beli 139.8M — obscure, belum terkonfirmasi akumulasi berlanjut",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang mendukung tesis akumulasi"
+      ],
+      "confidence": 78,
+      "ticker": "BTPS",
+      "reason": "AK (UBS) -330M + ZP (Maybank) -295M net sell 1d = distribusi tier-1 terkonfirmasi; bid wall 18.77 umpan (harga turun -1%); sinyal mixed CC beli vs distribusi institusi asing = no edge."
+    },
+    "BUMI": {
+      "timestamp": "2026-11-13T18:06:11.162488",
+      "key_strength": "KZ (CLSA) tier-1 asing masuk net +11B/1d dengan jual NOL (rasio beli:jual ∞) di saham ini — sangat tidak biasa untuk CLSA masuk BUMI mid-session. AK (UBS) +27.1B, LG (Trimegah) +26.9B juga akumulasi bersih. Tape BULLISH kuat: BSR 1.58, net vol +513M lembar, close 136 di ATAS POC 135, akumulasi terbesar di 136 (+207M) dan 137 (+121M) = bandar absorb di atas. Depth buku dalam menunjukkan bid > offer (1.119) — lebih sehat dari L1.",
+      "verdict": "NEUTRAL",
+      "risk_flags": [
+        "CC (Mandiri Sekuritas) net sell -33.95B/1d — tier-1 distribusi BESAR, berlawanan langsung dengan akumulasi AK/LG/IF",
+        "ZP (Maybank) net sell -9.64B/1d — tier-1 jual, frekuensi negatif -105 tapi volume jual 2x volume beli = low-freq high-value sell pada sell side",
+        "SQ (BCA Sekuritas) net sell -10.05B/1d — broker institusi tier-1 lokal distribusi",
+        "XL (Stockbit/retail) net sell -12.56B — retail panic sell tapi ini POSITIF untuk tesis akumulasi; namun kehadiran retail sell masif menunjukkan volatilitas tinggi",
+        "Kenaikan +7.09% intraday dalam satu hari = momentum sudah terbakar sebagian; entry besok pagi risiko beli high, reversal gap-down possible",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang mendukung tesis akumulasi; alasan bandar masuk belum terkonfirmasi",
+        "Insider signal NEUTRAL (120d): tidak ada konfirmasi akumulasi dari sisi pemilik/direksi",
+        "IF (Samuel Sekuritas) top buyer +28.1B — broker tier-2/obscure yang tiba-tiba dominan; perlu dikonfirmasi apakah proxy atau market maker"
+      ],
+      "confidence": 65,
+      "ticker": "BUMI",
+      "reason": "Tape bullish kuat (BSR 1.58, close di atas POC) dan akumulasi intraday solid dari AK (UBS +27.1B), IF (Samuel +28.1B), LG (Trimegah +26.9B), KZ (CLSA +11B, jual NOL), BB (Verdhana +8.8B, jual NOL) — namun berlawanan dengan distribusi signifikan CC (Mandiri -34B tier-1), ZP (Maybank -9.6B tier-1), SQ (BCA Sek -10B). Sinyal MIXED: akumulasi tier-1 vs distribusi tier-1 berlawanan dalam satu hari = no clear edge. Tambah: kenaikan +7% hari ini sudah besar, entry besok pagi berisiko beli di puncak momentum harian."
+    },
+    "MEDC": {
+      "timestamp": "2026-11-13T18:07:02.642688",
+      "key_strength": "Konvergensi 5 broker tier-1 besar (ZP/Maybank +8.99B, YU/CGS +7.83B, CC/Mandiri +5.31B, DX/Bahana +3.66B, RX/Macquarie +3.41B jual NOL) dalam SATU hari = sinyal institusi terkoordinasi sangat kuat. Tape BULLISH ratio 1.34 dengan akumulasi terbesar di 1230 (harga close) dan 1225 (POC) — uang masuk di harga atas, bukan averaging down. Close di atas POC = markup sehat.",
+      "verdict": "NEUTRAL",
+      "risk_flags": [
+        "BB (Verdhana) net sell -30.09B/1d dengan freq 6819 — terbesar di sisi jual; meski pola distribusi algo bukan institusi tunggal, ukurannya signifikan dan perlu dipantau",
+        "BK (JP Morgan) net sell -4.17B/1d — broker tier-1 di sisi jual, meski skala lebih kecil dibanding akumulasi tier-1",
+        "Post-ex dividend (cum 10 Nov, -3 hari) — potensi tekanan jual dividend-hunter yang sudah selesai menahan; watch selling pressure",
+        "DIAMOND BRIDGE PTE. pegang 21.46% (big public block) — risiko konsentrasi kepemilikan; satu pihak bisa dominasi price action",
+        "Depth offer (98,649 lot) > depth bid (82,705 lot) di 10 level kedalaman — sedikit lebih berat sisi offer di kedalaman, meski L1 tebal bid",
+        "NO_SCHEDULED_CATALYST — tanpa katalis terjadwal, tesis bergantung penuh pada broker flow dan tape; perlu disiplin SL",
+        "💰 DIVIDEND GUARD: 2d setelah ex-date (DPS USD 0.00119) — broker-flow rawan unwinding dividend hunter, sinyal akumulasi/distribusi bisa palsu"
+      ],
+      "confidence": 60,
+      "ticker": "MEDC",
+      "reason": "[DIVIDEND GUARD] APPROVE→NEUTRAL (post-ex distortion). Konvergsi kuat: ZP+YU+CC+DX+RX (5 broker tier-1) semua net beli hari ini totalnya ~Rp29B, tape BULLISH (buy_sell_ratio 1.34), close di atas POC 1225, dan bid/offer L1 1.77 + depth buku dalam mendukung. Meski ada net sell BB (-30B/1d) yang besar, BB (Verdhana) dikenal sebagai aggregator algo/dark pool — frekuensi 6819 transaksi kecil-kecil, bukan distribusi institusi tunggal; counterpart-nya adalah 5 broker tier-1 yang beli dengan conviction. Insider jual Komisaris -0.01% bersifat trivial. Post-ex dividend tidak ada distorsi signifikan."
+    },
+    "INDF": {
+      "timestamp": "2026-11-13T18:07:42.136301",
+      "key_strength": "KZ (CLSA) beli Rp8.5B JUAL NOL (1d) + RX (Macquarie) beli Rp4.57B JUAL NOL — dua broker asing tier-1 masuk dengan conviction penuh tanpa satu lot pun dijual. Tape BULLISH (ratio 1.37), close = POC = 7000, akumulasi bersih di harga 7000.",
+      "verdict": "NEUTRAL",
+      "risk_flags": [
+        "CC (Mandiri Sek) net sell -Rp6.18B/1d — tier-1 lokal distribusi signifikan berlawanan dengan akumulasi asing",
+        "DX (Bahana Sek) beli NOL, jual Rp2.18B/1d — distribusi murni tier-1 lokal",
+        "YU (CGS International) net sell -Rp5.06B/1d — tambah tekanan distribusi",
+        "Depth buku 10 level: offer 24.827 lot vs bid 10.312 lot (ratio 0.415) — tekanan offer jauh lebih berat di kedalaman vs L1 yang menipu",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang justifikasi akumulasi",
+        "Float LIQUID (49.91%) — butuh modal sangat besar untuk markup, momentum lebih lambat"
+      ],
+      "confidence": 62,
+      "ticker": "INDF",
+      "reason": "KZ (CLSA) +Rp8.5B & RX (Macquarie) +Rp4.57B keduanya jual NOL — sinyal asing tier-1 kuat. Namun CC (Mandiri) net sell -Rp6.18B, DX (Bahana) jual NOL -Rp2.18B, YU (CGS) -Rp5.06B — distribusi institusi lokal tier-1 cukup besar berlawanan. Tape bullish & close=POC=7000 positif, tapi depth buku 10 level berat di offer (0.415). Mixed institusional tanpa katalis = tunggu konfirmasi."
+    }
+  }
+}
