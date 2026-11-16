@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-16",
+  "source": "idx-bandarmologi screener (Remora framework)",
+  "generated_at": "2026-11-16T18:12:02.264563",
+  "signal_count": 5,
+  "signals": {
+    "BJTM": {
+      "confidence": 72,
+      "verdict": "APPROVE",
+      "ticker": "BJTM",
+      "key_strength": "DP (DBS Vickers) beli 1.63 juta lot / Rp831M net JUAL NOL; BK (JP Morgan) beli 900.9K lot / Rp457M net JUAL NOL — dua institusi asing tier-1 masuk bersamaan tanpa satu lot pun dijual balik. Tape bullish ratio 2.12 dengan absorpsi bersih +2.2 juta vol; akumulasi dominan di 505-510, distribusi kecil di 500 (level support). Setup klasik institusi menyerap retail yang lemah tangan.",
+      "risk_flags": [
+        "Bid/offer L1 sangat tipis (0.088) — namun depth 10 level seimbang 1.06, L1 tidak representatif",
+        "PD (Indo Premier) net sell -506M + XL (Stockbit) net sell -487M 1d — retail panik/distribusi, harus dicross vs broker institusi",
+        "OD (BRI Danareksa) net sell -245M + NI (BNI Sekuritas) net sell -198M 1d — broker lokal tier-2 juga sisi jual",
+        "DX (Bahana Sekuritas) net sell -67M 1d, tier-1 lokal minor tapi perlu dimonitor",
+        "Harga flat (change 0.0%), belum breakout — masih akumulasi diam-diam, belum konfirmasi upside",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal, tesis bergantung penuh pada broker flow & tape",
+        "Volume di bawah rata-rata 20d (vol_ratio 0.83) — belum ada dorongan volume signifikan"
+      ],
+      "reason": "DP (DBS Vickers) + BK (JP Morgan) akumulasi bersih 1d tanpa jual selembar pun; tape bullish kuat (buy/sell ratio 2.12); kedalaman buku seimbang 1.06 (depth valid vs L1 tipis); retail PD/XL di sisi jual = setup absorpsi institusional vs distribusi ritel.",
+      "timestamp": "2026-11-16T18:05:27.213923"
+    },
+    "AALI": {
+      "confidence": 78,
+      "verdict": "REJECT",
+      "ticker": "AALI",
+      "key_strength": "SQ (BCA Sekuritas) net beli +4,587B dengan 270 freq beli vs 5 freq jual (satu arah), dikonfirmasi BK (JP Morgan) +2,112B dan AK (UBS) +571M — cluster institusi tier-1 beli; namun diimbangi distribusi berlawanan yang signifikan sehingga tidak cukup untuk APPROVE.",
+      "risk_flags": [
+        "BEARISH_TAPE: buy_sell_ratio 0.77, distribusi menumpuk di 9825/9800/9750 dekat close",
+        "XA (NH Korindo) net sell -1,935B dengan freq hanya 14 — LOW-FREQ HIGH-VALUE SELL = distribusi institusi terselubung",
+        "CC (Mandiri Sekuritas, tier-1) net sell -1,437B dalam 1d — konfirmasi distribusi institusi",
+        "YP (Mirae/retail aggregator) net sell -3,392B, 354 freq jual — retail jual panik atau bandar distribusi via platform retail",
+        "ZP (Maybank tier-1) net sell -475M tanpa beli sama sekali (freq beli 0)",
+        "Depth offer 17.531 vs bid 8.803 (ratio 0.50) — tekanan penawaran masih dominan",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal untuk justifikasi akumulasi",
+        "Volume hanya 33% dari rata-rata 20d — konfirmasi tidak ada conviction beli kuat"
+      ],
+      "reason": "Tape BEARISH (ratio 0.77), XA low-freq high-value sell -1,93B (distribusi institusi), CC Mandiri tier-1 net sell -1,43B, YP retail jual -3,39B — distribusi berlawanan akumulasi = no edge.",
+      "timestamp": "2026-11-16T18:06:22.877528"
+    },
+    "RAJA": {
+      "confidence": 88,
+      "verdict": "REJECT",
+      "ticker": "RAJA",
+      "key_strength": "ZP (Maybank) net +1.79B dan BQ (Korea Investment) net +1.03B/1d masuk, holder_5pct baru (SENTOSA BERSAMA MITRA +8.52pp, PT TIRTA ORISA YASA +15.82pp per Jul 2026) menunjukkan ada perubahan kepemilikan struktural — namun TERTIMPA oleh tape distribusi hari ini yang overwhelm",
+      "risk_flags": [
+        "BEARISH_TAPE: buy/sell ratio 0.35 — jual dominan 2.8x beli, net vol -51.9M lot hari ini",
+        "Distribusi menumpuk di harga BAWAH (500, 515, 494) dekat close 494 = breakdown/bandar buang",
+        "Close di BAWAH POC (500) + net sell = distribusi terkonfirmasi tape",
+        "CC (Mandiri Sekuritas) tier-1 net sell -2.74B/1d — institusi besar distribusi",
+        "KI (Ciptadana) net sell -2.61B/1d, sell avg 499 vs buy avg 518 — distribusi dari atas",
+        "AK (UBS) net_freq -175 (lebih banyak frekuensi jual) meski net_value positif = sinyal mixed/crossing tersembunyi",
+        "Depth: offer 157.898 lot vs bid 5.871 lot — tekanan supply overwhelm demand (rasio 0.037)",
+        "Change -6.79% hari ini — harga turun signifikan, bid tebal tidak ada (bid_offer_valid: false)",
+        "Retail XL (Stockbit) net sell -1.03B = panik retail, bukan absorpsi",
+        "holder_5pct_keluar: PT SENTOSA BERSAMA MITRA turun dari 8.95% → 0.41% (Sep 2026) = pengendali keluar",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal yang bisa justify akumulasi",
+        "suspect_backfill SENTOSA BERSAMA MITRA (0→8.54%) = artefak data, JANGAN dibaca akumulasi"
+      ],
+      "reason": "BEARISH_TAPE ekstrem (buy/sell ratio 0.35, net vol -51.9M), distribusi masif di harga bawah dekat close 494, CC tier-1 net sell -2.74B, depth offer 157.898 lot vs bid 5.871 lot (rasio 0.037) — dominan distribusi tanpa akumulasi bersih.",
+      "timestamp": "2026-11-16T18:06:48.159362"
+    },
+    "TPIA": {
+      "confidence": 88,
+      "verdict": "REJECT",
+      "ticker": "TPIA",
+      "key_strength": "OD (BRI Danareksa) +10.2B dan SQ (BCA Sekuritas) +10.0B net beli 1d — ada absorpsi lokal, namun jauh tertutup oleh distribusi tier-1 asing yang 3x lebih besar",
+      "risk_flags": [
+        "CC (Mandiri Sekuritas) net sell -24.68B dalam 1d — distribusi tier-1 masif",
+        "AK (UBS) net sell -17.46B dalam 1d — institusi asing tier-1 buang barang besar",
+        "BK (JP Morgan) net sell -6.46B dalam 1d — tiga broker tier-1 searah distribusi = konviksi tinggi",
+        "BID_WALL_TRAP: bid/offer L1 = 14.34 TAPI harga turun -5.3% — bid tebal adalah umpan/jebakan sesuai aturan Hengky",
+        "BEARISH_TAPE: buy/sell ratio 0.60, net vol -33.4M; distribusi menumpuk di 1275/1305/1310 dekat close",
+        "Close 1245 di BAWAH POC 1280 + net sell = breakdown distribusi terkonfirmasi tape",
+        "NO_SCHEDULED_CATALYST + insider signal NEUTRAL = tidak ada katalis terjadwal yang bisa counter distribusi",
+        "Big public blocks: SCG Chemicals 15.71% + PT Top Investment 15.0% = risiko blok besar keluar sewaktu-waktu"
+      ],
+      "reason": "Distribusi masif tier-1: CC -24.7B, AK (UBS) -17.5B, BK (JPM) -6.5B dalam 1 hari; tape BEARISH (buy/sell 0.6); harga -5.3% + bid_wall tebal = klasik BID TRAP.",
+      "timestamp": "2026-11-16T18:07:08.934036"
+    },
+    "INCO": {
+      "confidence": 88,
+      "verdict": "REJECT",
+      "ticker": "INCO",
+      "key_strength": "BK (JP Morgan) net beli +7.76B dan YU (CGS) net beli +6.43B 1d — ada dua institusi tier-1 yang absorpsi, namun kalah volume vs distribusi BB+AK+ZP yang lebih besar",
+      "risk_flags": [
+        "BB (Verdhana) net sell -13.57B 1d, beli NOL — akumulasi satu arah JUAL, institusi tier-1 buang besar",
+        "AK (UBS) net sell -9.66B 1d — broker tier-1 asing distribusi agresif, hard reject trigger",
+        "ZP (Maybank) net sell -3.34B 1d — tier-1 ketiga ikut distribusi, sinyal konvergen institusi keluar",
+        "BID_WALL_TRAP: b/o L1 533x tapi harga -5.7% = bid umpan/jebakan, kedalaman nyata 2.31x jauh lebih tipis",
+        "BEARISH_TAPE 0.67: distribusi menumpuk di harga bawah (3520, 3620, 3500), close = POC 3480 = breakdown",
+        "PD (Indo Premier/retail) net sell -3.9B = retail panik ikut keluar, bukan absorpsi",
+        "Insider sell: M Slamet Sugiharto (DIREKSI) jual saham — meski kecil, sinyal struktural negatif",
+        "RUPS 2 hari lagi: sell-on-news risk tinggi, distribusi sebelum event adalah pola klasik bandar keluar"
+      ],
+      "reason": "Distribusi masif tier-1: BB jual nol beli -13,6B, AK net sell -9,7B, ZP -3,3B — tape bearish 0.67, harga -5.7% dengan bid-wall trap.",
+      "timestamp": "2026-11-16T18:07:30.215830"
+    }
+  }
+}
