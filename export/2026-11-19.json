@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-19",
+  "source": "idx-bandarmologi screener (Remora framework)",
+  "generated_at": "2026-11-19T18:12:01.785913",
+  "signal_count": 3,
+  "signals": {
+    "AMMN": {
+      "key_strength": "TP (OCBC) net buy +13.2B dan YU (CGS) net buy +9.4B/1d — dua broker institusi akumulasi; komisaris ALEXANDER RAMLIE beli kecil Juli 2026 (0.002%); depth bid 76k lot vs offer 21k lot (depth_ratio 3.52) menunjukkan ada support kedalaman",
+      "timestamp": "2026-11-19T18:05:31.855483",
+      "reason": "Tape BEARISH (buy_sell_ratio 0.54), distribusi tier-1 masif (DX -21.2B, BB -16.5B, LG -5.8B, KZ -4.3B), close di bawah POC, market BEARISH — sinyal jual terkonfirmasi berlapis.",
+      "risk_flags": [
+        "DX (Bahana) net sell -21.2B/1d — broker institusi tier-1, distribusi besar freq tinggi (1308 jual), BUKAN crossing isolasi",
+        "BB (Verdhana) net sell -16.5B/1d — buy_freq=0, jual murni 4160 transaksi, distribusi institusi sangat agresif",
+        "LG (Trimegah) net sell -5.8B/1d — institusi lokal distribusi tambahan",
+        "KZ (CLSA) net sell -4.3B/1d — broker tier-1 asing distribusi (16 beli vs 1138 jual, low-freq buy = bukan absorpsi)",
+        "PD (Indo Premier/retail) net sell -4.9B/1d — retail panik keluar memperburuk tape",
+        "BEARISH_TAPE: buy_sell_ratio 0.54, net_vol -18.3jt, distribusi terkonsentrasi di 3200 (-5.8B lot) dekat close 3150",
+        "Close 3150 DI BAWAH POC 3200 + net sell = distribusi breakdown confirmed",
+        "Harga -4.55% hari ini — turun signifikan, bukan konsolidasi",
+        "Market regime BEARISH (LQ45 ret_20d -6.67%) — counter-trend trade berisiko tinggi",
+        "bid/offer L1 ratio 0.33 (tipis di bid) SEARAH tape negatif — bukan umpan, terkonfirmasi distribusi",
+        "RUPS baru lewat 2 hari lalu, belum ada katalis baru terjadwal (NO_SCHEDULED_CATALYST)"
+      ],
+      "confidence": 87,
+      "ticker": "AMMN",
+      "verdict": "REJECT"
+    },
+    "ICBP": {
+      "key_strength": "ZP (Maybank) net buy +6.69B 1d dengan buy_freq 598 dominan, KZ (CLSA tier-1 asing) net buy +4.51B 1d jual NOL — akumulasi tier-1 asing kuat. Namun BERLAWANAN dengan distribusi YU/AK/SQ yang juga tier-1 → sinyal mixed, NO EDGE.",
+      "timestamp": "2026-11-19T18:05:53.827770",
+      "reason": "Tape BEARISH (buy_sell_ratio 0.82), distribusi di harga bawah dekat close, YU net sell -2.58B + AK/UBS net sell -729M 1d, market regime BEARISH — mixed signal distribusi tier-1 mendominasi.",
+      "risk_flags": [
+        "BEARISH_TAPE: buy_sell_ratio 0.82, distribusi menumpuk di 7000/6950/6975 (level dekat close), close DI BAWAH POC 7000",
+        "YU (CGS) net sell -2.58B 1d, jual 369.500 lembar, buy_vol NOL — distribusi institusi tier-1 murni",
+        "AK (UBS) net sell -729M 1d, sell_avg 6993 vs buy_avg 6936 — jual lebih tinggi dari beli, distribusi terselubung",
+        "YP (Mirae/retail) net sell -1.73B 1d — retail ikut jual, bukan panic buy",
+        "SQ (BCA Sekuritas) net sell -1.11B 1d — tambah tekanan jual institusi lokal",
+        "Market regime BEARISH (LQ45 ret_20d -6.67%) — bar APPROVE sangat tinggi, butuh sinyal bersih total",
+        "Depth ratio 0.50 (depth_bid 7653 vs depth_offer 15206) — penawaran 2x bid di buku dalam, tekanan jual struktural",
+        "NO_SCHEDULED_CATALYST — tidak ada katalis terjadwal untuk justifikasi akumulasi"
+      ],
+      "confidence": 82,
+      "ticker": "ICBP",
+      "verdict": "REJECT"
+    },
+    "EMAS": {
+      "key_strength": "Insider PENGENDALI Merdeka Copper Gold beli +0.683% (Aug 2026) dan Komisaris Santoso Kartono beli dua kali (Oct-Nov 2026); CC (Mandiri) + AK (UBS) + AI (UOB Kay Hian) net beli tier-1 hari ini; RUPS 7 hari lagi sebagai katalis spekulatif. NAMUN semua ini tidak cukup melawan distribusi DX+BK tier-1 yang jauh lebih besar hari ini.",
+      "timestamp": "2026-11-19T18:06:18.617666",
+      "reason": "DX (Bahana) net sell -7.4B + BK (JP Morgan) net sell -3.2B tier-1 distribusi besar 1d; tape BEARISH (ratio 0.72), BID_WALL_TRAP aktif, market BEARISH.",
+      "risk_flags": [
+        "DX (Bahana Sekuritas) net sell -7.38B dalam 1d, freq jual 997 vs beli 6 — distribusi institusi tier-1 masif",
+        "BK (JP Morgan) net sell -3.25B dalam 1d, freq jual 666 vs beli 195 — distribusi tier-1 berlawanan arah akumulasi",
+        "BID_WALL_TRAP aktif: L1 bid/offer 12.86 (tebal) TAPI harga TURUN -2.54% hari ini — bid umpan/jebakan sesuai aturan Hengky",
+        "BEARISH_TAPE: buy_sell_ratio 0.72, net vol -1.57M; distribusi menumpuk di 4500 (-636K) dan 4700 (-542K) dekat close",
+        "ZP (Maybank) net_freq NEGATIF (-68) meski net_value positif — crossing tersembunyi, kemungkinan distribusi via lot besar 1-2 transaksi",
+        "holder_5pct_keluar: PT Merdeka Copper Gold (pengendali) tercatat keluar dari 50.1% ke 0% per 23 Sep 2026 via broker PD — anomali data signifikan, risiko kepemilikan tidak jelas",
+        "Market regime BEARISH (ret_20d -6.67%) — bar APPROVE sangat tinggi, mayoritas long rugi di kondisi ini",
+        "PD (Indo Premier/retail aggregator) di top buyer 1d sebagai net buyer terbesar — sinyal retail-driven, bukan smart money murni"
+      ],
+      "confidence": 82,
+      "ticker": "EMAS",
+      "verdict": "REJECT"
+    }
+  }
+}
