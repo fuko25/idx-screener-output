@@ -1,16 +1,16 @@
 {
   "date": "2026-11-23",
   "source": "idx-bandarmologi screener (Remora framework)",
-  "generated_at": "2026-11-23T18:12:02.288959",
+  "generated_at": "2026-11-24T18:12:01.890806",
   "signal_count": 3,
   "signals": {
     "MDKA": {
-      "confidence": 82,
-      "ticker": "MDKA",
+      "key_strength": "AK (UBS) net buy +8.86B, BK (JP Morgan) +4.21B, CC (Mandiri) +4.16B dalam 1d — konsentrasi tier-1 beli sangat kuat; tape BULLISH 1.3 ratio; Saratoga masuk jadi holder >5% (prev 4.29% → 5.36%); insider direksi buy via LTIP; depth ratio 1.38 (bid dalam lebih tebal dari offer). Namun semua ini kalah oleh CRASH regime + distribusi tier-1 lain.",
       "timestamp": "2026-11-23T18:05:28.879022",
+      "confidence": 82,
       "reason": "MARKET REGIME CRASH (ret_20d -7.92%) = hard skip semua long entry; sinyal akumulasi tier-1 bagus tapi aturan regime override.",
       "verdict": "REJECT",
-      "key_strength": "AK (UBS) net buy +8.86B, BK (JP Morgan) +4.21B, CC (Mandiri) +4.16B dalam 1d — konsentrasi tier-1 beli sangat kuat; tape BULLISH 1.3 ratio; Saratoga masuk jadi holder >5% (prev 4.29% → 5.36%); insider direksi buy via LTIP; depth ratio 1.38 (bid dalam lebih tebal dari offer). Namun semua ini kalah oleh CRASH regime + distribusi tier-1 lain.",
+      "ticker": "MDKA",
       "risk_flags": [
         "MARKET REGIME CRASH: ret_20d -7.92% — aturan sistem SKIP ALL ENTRIES, override semua sinyal positif",
         "YU (CGS International) net sell -5.72B dalam 1d — tier-1 asing distribusi agresif, freq jual 982 vs beli 91",
@@ -24,12 +24,12 @@
       ]
     },
     "ICBP": {
-      "confidence": 92,
-      "ticker": "ICBP",
+      "key_strength": "CC (Mandiri) net buy +4.48B + KZ (CLSA) net buy +2.23B jual NOL + LG (Trimegah) +2.29B 1d — ada akumulasi tier-1 domestik dan CLSA asing. Namun sinyal MIXED dengan distribusi tier-1 asing berlawanan kuat.",
       "timestamp": "2026-11-23T18:05:50.726661",
+      "confidence": 92,
       "reason": "MARKET REGIME CRASH + distribusi tier-1 masif 1d (AK/BK/YU/BB net sell >Rp5.4B) + tape close di bawah POC + bid wall trap terkonfirmasi.",
       "verdict": "REJECT",
-      "key_strength": "CC (Mandiri) net buy +4.48B + KZ (CLSA) net buy +2.23B jual NOL + LG (Trimegah) +2.29B 1d — ada akumulasi tier-1 domestik dan CLSA asing. Namun sinyal MIXED dengan distribusi tier-1 asing berlawanan kuat.",
+      "ticker": "ICBP",
       "risk_flags": [
         "MARKET REGIME CRASH: LQ45 ret_20d -7.92% — aturan wajib SKIP ALL ENTRIES",
         "BID_WALL_TRAP: b/o L1 118.54 TAPI harga -0.72% dan depth ratio 0.83 (lebih seimbang) — bid L1 tebal adalah UMPAN, tape membuktikan jual mendominasi di bawah",
@@ -43,12 +43,12 @@
       ]
     },
     "EMAS": {
-      "confidence": 82,
-      "ticker": "EMAS",
+      "key_strength": "AK (UBS) net buy +3.49B/1d + PD net buy +5.01B/1d (meski PD = retail aggregator); MERDEKA COPPER GOLD sebagai pengendali tercatat insider buy +0.683% (Agu 2026); RUPS dalam 3 hari sebagai katalis potensial; tape BULLISH ratio 1.47 dengan akumulasi dominan di 4790/4700/4550. NAMUN semua ini tidak cukup melawan market regime CRASH + distribusi multi-tier-1 berlawanan.",
       "timestamp": "2026-11-23T18:06:19.299014",
+      "confidence": 82,
       "reason": "MARKET REGIME CRASH (-7.92%) = hard skip semua long entry. Distribusi tier-1 berlawanan: CC -2.62B, BK -2.30B, CP -1.97B hari ini — sinyal mixed dengan akumulasi AK/PD.",
       "verdict": "REJECT",
-      "key_strength": "AK (UBS) net buy +3.49B/1d + PD net buy +5.01B/1d (meski PD = retail aggregator); MERDEKA COPPER GOLD sebagai pengendali tercatat insider buy +0.683% (Agu 2026); RUPS dalam 3 hari sebagai katalis potensial; tape BULLISH ratio 1.47 dengan akumulasi dominan di 4790/4700/4550. NAMUN semua ini tidak cukup melawan market regime CRASH + distribusi multi-tier-1 berlawanan.",
+      "ticker": "EMAS",
       "risk_flags": [
         "MARKET REGIME CRASH (ret_20d -7.92%) — aturan SKIP ALL ENTRIES, override semua sinyal bullish",
         "CC (Mandiri Sekuritas) net sell -2.62B/1d — tier-1 lokal distribusi agresif hari ini",
